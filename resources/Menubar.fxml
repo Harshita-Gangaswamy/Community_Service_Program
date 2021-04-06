@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<MenuBar 
+  xmlns="http://javafx.com/javafx/8.0.40"
+  xmlns:fx="http://javafx.com/fxml/1" 
+  fx:controller="commTracker.MenubarController">
+  <menus>
+    <Menu 
+      mnemonicParsing="false" 
+      text="Student">
+      <items>
+        <MenuItem 
+          fx:id="studentHours" 
+          mnemonicParsing="false"
+          onAction="#editStudentHours" 
+          text="Student Hours" />
+		<MenuItem 
+          fx:id="searchAndEditStudent" 
+          mnemonicParsing="false"
+          onAction="#searchAndEditStudent" 
+          text="Search and Edit Student" />
+		<MenuItem 
+          fx:id="addStudent" 
+          mnemonicParsing="false"
+          onAction="#addStudent" 
+          text="Add Student" />
+		<MenuItem 
+          fx:id="deleteStudent" 
+          mnemonicParsing="false"
+          onAction="#deleteStudent" 
+          text="Delete Student" />
+      </items>
+    </Menu>
+    <Menu 
+      mnemonicParsing="false" 
+      text="CSA Programs">
+      <items>
+		<MenuItem 
+          fx:id="searchAndEditProgram" 
+          mnemonicParsing="false"
+          onAction="#searchAndEditProgram" 
+          text="Search and Edit Programs" />
+		<MenuItem 
+          fx:id="addProgram" 
+          mnemonicParsing="false"
+          onAction="#addProgram" 
+          text="Add Program" />
+      </items>
+    </Menu>
+	<Menu 
+      mnemonicParsing="false" 
+      text="Reports">
+      <items>
+		<MenuItem 
+          fx:id="weeklyCSA" 
+          mnemonicParsing="false"
+          onAction="#generateWeeklyCSA" 
+          text="Weekly CSA Report" />
+		<MenuItem 
+          fx:id="monthlyCSA" 
+          mnemonicParsing="false"
+          onAction="#generateMonthlyCSA" 
+          text="Monthly CSA Report" />
+		<MenuItem 
+          fx:id="weeklyStudent" 
+          mnemonicParsing="false"
+          onAction="#generateWeeklyStudent" 
+          text="Weekly Student Report" />
+		<MenuItem 
+          fx:id="monthlyStudent" 
+          mnemonicParsing="false"
+          onAction="#generateMonthlyStudent" 
+          text="Monthly Student Report" />
+      </items>
+    </Menu>
+	<Menu
+	  mnemonicParsing="false" 
+	  text="Logout">
+	  <items>
+		<MenuItem 
+		  fx:id="logout" 
+		  mnemonicParsing="false"
+		  onAction="#logout" 
+		  text="Logout" />
+	  </items>
+	</Menu>
+  </menus>
+</MenuBar>

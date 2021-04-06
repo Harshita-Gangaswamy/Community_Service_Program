@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" 
+		prefHeight="500.0" prefWidth="750.0" style="-fx-background-color: white;"
+		xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" 
+		fx:controller="commTracker.LoginController">
+   <children>
+
+	<Text strokeWidth="10.0" style="-fx-font-size: 40; -fx-fill: black" 
+		text="Admin Login" textAlignment="CENTER" layoutX = "260.0" layoutY = "200"/>
+    
+	<Label layoutX="240.0" layoutY="220.0" style="-fx-font-size: 13; -fx-text-fill: red" fx:id="correction"/>
+	<Label layoutX="235.0" layoutY="260.0" text="Username" style="-fx-font-size: 15; -fx-text-fill: black"/>
+	<Label layoutX="235.0" layoutY="300.0" text="Password" style="-fx-font-size: 15; -fx-text-fill: black"/>
+   	
+	<TextField  prefWidth="200"	layoutX="310.0" layoutY="260.0"	fx:id="username" />
+	<TextField  prefWidth="200"	layoutX="310.0" layoutY="300.0"	fx:id="password" />
+	
+	<Button fx:id="loginBtn" layoutX="300.0" layoutY="340.0" 		
+		mnemonicParsing="false" text="LOGIN" textAlignment="CENTER" onAction="#userLogin" />
+	<Button fx:id="clearBtn" layoutX="360.0" layoutY="340.0" 		
+		mnemonicParsing="false" text="CLEAR" textAlignment="CENTER" onAction="#clearLogin" />
+    
+   </children>
+</AnchorPane>

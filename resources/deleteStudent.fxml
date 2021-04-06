@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ChoiceBox?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" 
+		prefHeight="500.0" prefWidth="750.0" style="-fx-background-color: white;"
+		xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" 
+		fx:controller="commTracker.DeleteStudentController">
+	<children>
+		<Text strokeWidth="10.0" style="-fx-font-size: 40; -fx-fill: black" 
+		text="Delete Student Information" textAlignment="CENTER" layoutX = "170.0" layoutY = "35"/> 
+		
+		<Text strokeWidth="10.0" style="-fx-font-size: 18; -fx-fill: black" 
+		text="Student First Name" textAlignment="CENTER" layoutX = "15.0" layoutY = "85"/>
+		<TextField  prefWidth="300"	layoutX="205.0" layoutY="66.0" fx:id="firstName" />
+		
+		<Text strokeWidth="10.0" style="-fx-font-size: 18; -fx-fill: black" 
+		text="Student Last Name" textAlignment="CENTER" layoutX = "15.0" layoutY = "130"/>
+		<TextField  prefWidth="300"	layoutX="205.0" layoutY="111.0" fx:id="lastName" />
+		
+		<Text strokeWidth="10.0" style="-fx-font-size: 18; -fx-fill: black" 
+		text="Student Middle Name" textAlignment="CENTER" layoutX = "15.0" layoutY = "175"/>
+		<TextField  prefWidth="150"	layoutX="205.0" layoutY="156.0"	fx:id="midName" />
+		
+		<Text strokeWidth="10.0" style="-fx-font-size: 18; -fx-fill: black" 
+		text="Student ID" textAlignment="CENTER" layoutX = "15.0" layoutY = "220"/>
+		<TextField  prefWidth="150"	layoutX="205.0" layoutY="201.0"	fx:id="studentID" />
+		
+		<Text strokeWidth="10.0" style="-fx-font-size: 18; -fx-fill: black" 
+		text="Grade" textAlignment="CENTER" layoutX = "400" layoutY = "220"/>
+		<RadioButton fx:id="grade9" mnemonicParsing="false" text="9" layoutX = "475.0" layoutY = "205">
+               <toggleGroup>
+                  <ToggleGroup fx:id="group1" />
+               </toggleGroup>
+		</RadioButton>
+		<RadioButton fx:id="grade10" mnemonicParsing="false" text="10" toggleGroup="$group1" layoutX = "540.0" layoutY = "205"/>
+        <RadioButton fx:id="grade11" mnemonicParsing="false" text="11" toggleGroup="$group1" layoutX = "620.0" layoutY = "205"/>
+		<RadioButton fx:id="grade12" mnemonicParsing="false" text="12" toggleGroup="$group1" layoutX = "700.0" layoutY = "205"/>
+		
+		<Button fx:id="deleteBtn" layoutX="300.0"	layoutY="275.0" 		
+		mnemonicParsing="false" text="DELETE" textAlignment="CENTER" onAction="#delete" />
+		
+	</children>
+
+</AnchorPane>

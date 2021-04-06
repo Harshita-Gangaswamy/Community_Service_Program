@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" 
+		prefHeight="500.0" prefWidth="800.0" style="-fx-background-color: white;"
+		xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" 
+		fx:controller="commTracker.StudentHoursController">
+	<children>
+		
+		<Text strokeWidth="10.0" style="-fx-font-size: 40; -fx-fill: black" 
+		text="Student Hours" textAlignment="CENTER" layoutX = "235.0" layoutY = "35"/> 
+		
+		<Label layoutX="15.0" layoutY="45.0" style="-fx-font-size: 13; -fx-text-fill: red" fx:id="correction"/>
+		
+		<Text strokeWidth="10.0" style="-fx-font-size: 18; -fx-fill: black" 
+		text="Student ID" textAlignment="CENTER" layoutX = "15.0" layoutY = "85"/>
+		<TextField  prefWidth="100"	layoutX="110.0" layoutY="66.0" fx:id="studentId" />
+		
+		<Button fx:id="searchIdBtn" layoutX="225.0"	layoutY="66.0" 		
+		mnemonicParsing="false" text="Search" textAlignment="CENTER" onAction="#searchId" />
+		
+		<Label style="-fx-font-size: 18; -fx-fill: black" fx:id="CSAProgram" 
+		textAlignment="CENTER" layoutX = "15.0" layoutY = "111"/>
+		<ComboBox  prefWidth="200"	layoutX="200.0" layoutY="111.0" fx:id="programName" onAction="#searchSpecific" />
+		<ListView  prefWidth="200"	layoutX="225.0" layoutY="111.0" fx:id="programList" />
+		
+		<Button fx:id="addProgramBtn" layoutX="10.0" layoutY="145.0" 		
+		mnemonicParsing="false" text="Add Program" textAlignment="CENTER" onAction="#addProgramName" />
+		
+		<Label style="-fx-font-size: 18; -fx-fill: black" fx:id="totalHrsText" 
+		textAlignment="CENTER" layoutX = "10.0" layoutY = "185"/>
+		<TextField  prefWidth="45"	layoutX="110.0" layoutY="187.0" fx:id="totalHours" />
+		
+		<Button fx:id="doneBtn" layoutX="110.0" layoutY="145.0" 		
+		mnemonicParsing="false" text="Done" textAlignment="CENTER" onAction="#done" />
+		
+		<TableView fx:id="hoursTable" editable="true" layoutX="450.0" layoutY="45.0">
+			<columns>
+				<TableColumn text="Date" fx:id="dateColumn" prefWidth="150.0"/>
+				<TableColumn text="Hours" fx:id="hoursColumn" prefWidth="70.0"/>
+			</columns>    
+		</TableView>
+		
+		<Label style="-fx-font-size: 18; -fx-fill: black" fx:id="hoursText" 
+		textAlignment="CENTER" layoutX = "10.0" layoutY = "220"/>
+		<TextField  prefWidth="45"	layoutX="70.0" layoutY="220.0" fx:id="enterHours" />
+		
+		<Label style="-fx-font-size: 18; -fx-fill: black" fx:id="dateText" 
+		textAlignment="CENTER" layoutX = "10.0" layoutY = "255"/>
+		<DatePicker layoutX = "60.0" layoutY = "255.0" fx:id="datePopup"/>
+		
+		<Button fx:id="addHoursBtn" layoutX="10.0"	layoutY="295.0" 		
+		mnemonicParsing="false" text="Add Hours" textAlignment="CENTER" onAction="#addHours" />
+		
+		<Button fx:id="cancelHoursBtn" layoutX="100.0"	layoutY="295.0" 		
+		mnemonicParsing="false" text="Cancel" textAlignment="CENTER" onAction="#cancelHours" />
+		
+		<Label layoutX="180.0" layoutY="295.0" style="-fx-font-size: 15; -fx-text-fill: black" fx:id="status"/>
+		
+		<Button fx:id="editBtn" layoutX="10.0"	layoutY="340.0" 		
+		mnemonicParsing="false" text="Edit" textAlignment="CENTER" onAction="#edit" />
+		
+		<Button fx:id="deleteBtn" layoutX="100.0" layoutY="340.0" 		
+		mnemonicParsing="false" text="Delete" textAlignment="CENTER" onAction="#delete" />
+		
+		<Label style="-fx-font-size: 18; -fx-fill: black" fx:id="hoursEditText" 
+		textAlignment="CENTER" layoutX = "10.0" layoutY = "365"/>
+		<TextField  prefWidth="35"	layoutX="70.0" layoutY="365.0" fx:id="editHours" />
+		
+		<Label style="-fx-font-size: 18; -fx-fill: black" fx:id="dateEditText" 
+		textAlignment="CENTER" layoutX = "120.0" layoutY = "365"/>
+		<DatePicker layoutX = "170.0" layoutY = "365.0" fx:id="editDate"/>
+		
+		<Button fx:id="saveBtn" layoutX="10.0"	layoutY="395.0" 		
+		mnemonicParsing="false" text="Save" textAlignment="CENTER" onAction="#save" />
+		<Button fx:id="cancelBtn" layoutX="100.0" layoutY="395.0" 		
+		mnemonicParsing="false" text="Cancel" textAlignment="CENTER" onAction="#cancel" />
+		
+	</children>
+
+</AnchorPane>

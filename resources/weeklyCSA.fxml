@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" 
+		prefHeight="500.0" prefWidth="750.0" style="-fx-background-color: white;"
+		xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" 
+		fx:controller="commTracker.weeklyCSAController">
+	<children>
+		<Text strokeWidth="10.0" style="-fx-font-size: 40; -fx-fill: black" 
+		text="Weekly CSA Report and Total Hours" textAlignment="CENTER" layoutX = "50.0" layoutY = "35.0"/> 
+		
+		<Text strokeWidth="10.0" style="-fx-font-size: 18; -fx-fill: black" 
+		text="Filter Week" textAlignment="CENTER" layoutX = "420.0" layoutY = "77"/>
+		<ComboBox  prefWidth="70"	layoutX="522.0" layoutY="60.0" fx:id="week" />
+		
+		<Text strokeWidth="10.0" style="-fx-font-size: 18; -fx-fill: black" 
+		text="Filter Year" textAlignment="CENTER" layoutX = "420.0" layoutY = "122"/>
+		<ComboBox  prefWidth="70"	layoutX="522.0" layoutY="105.0" fx:id="year" />
+		
+		<Button fx:id="searchBtn" layoutX="605.0"	layoutY="105.0" 		
+		mnemonicParsing="false" text="Search" textAlignment="CENTER" onAction="#search" />
+		
+		<TableView fx:id="csaTable" editable="true" layoutX="100.0" layoutY="60.0">
+			<columns>
+				<TableColumn text="Category" fx:id="categoryColumn" prefWidth="150.0"/>
+				<TableColumn text="Total Hours" fx:id="hoursColumn" prefWidth="80.0"/>
+			</columns>    
+		</TableView>
+		
+		<Label layoutX="550.0" layoutY="400.0" style="-fx-font-size: 15; -fx-text-fill: black" fx:id="status"/>
+		
+		<Button fx:id="printBtn" layoutX="550.0"	layoutY="350.0"		
+		mnemonicParsing="false" text="Print" textAlignment="CENTER" onAction="#print" />
+		
+	</children>
+
+</AnchorPane>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" 
+		prefHeight="500.0" prefWidth="750.0" style="-fx-background-color: white;"
+		xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" 
+		fx:controller="commTracker.searchAndEditProgramController">
+	<children>
+		<Text strokeWidth="10.0" style="-fx-font-size: 40; -fx-fill: black" 
+		text="Search and Edit a CSA Program" textAlignment="CENTER" layoutX = "115.0" layoutY = "35"/> 
+		
+		<Label layoutX="200.0" layoutY="45.0" style="-fx-font-size: 13; -fx-text-fill: red" fx:id="correction"/>
+		
+		<Text strokeWidth="10.0" style="-fx-font-size: 18; -fx-fill: black" 
+		text="Program ID" textAlignment="CENTER" layoutX = "15.0" layoutY = "85"/>
+		<TextField  prefWidth="300"	layoutX="205.0" layoutY="66.0" fx:id="programId" />
+				
+		<Button fx:id="searchBtn" layoutX="515.0"	layoutY="66.0" 		
+		mnemonicParsing="false" text="Search" textAlignment="CENTER" onAction="#search" />
+		
+		<Text strokeWidth="10.0" style="-fx-font-size: 18; -fx-fill: black" 
+		text="CSA Program Name" textAlignment="CENTER" layoutX = "15.0" layoutY = "130"/>
+		<TextField  prefWidth="300"	layoutX="205.0" layoutY="111.0" fx:id="programName" />
+		
+		<Text strokeWidth="10.0" style="-fx-font-size: 18; -fx-fill: black" 
+		text="Program Description" textAlignment="CENTER" layoutX = "15.0" layoutY = "175"/>
+		<TextArea  prefWidth="300"	prefHeight="200" layoutX="205.0" layoutY="156.0" fx:id="description" />
+		
+		<Label layoutX="200.0" layoutY="400.0" style="-fx-font-size: 15; -fx-text-fill: black" fx:id="status"/>
+		
+		<Button fx:id="editBtn" layoutX="310.0"	layoutY="365.0" 		
+		mnemonicParsing="false" text="Edit" textAlignment="CENTER" onAction="#edit" />
+		<Button fx:id="saveBtn" layoutX="250.0"	layoutY="365.0" 		
+		mnemonicParsing="false" text="Save" textAlignment="CENTER" onAction="#save" />
+		<Button fx:id="deleteBtn" layoutX="370.0"	layoutY="365.0" 		
+		mnemonicParsing="false" text="Delete" textAlignment="CENTER" onAction="#delete" />
+		
+	</children>
+
+</AnchorPane>
